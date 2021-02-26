@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
     {% block main %}
+    <h1 class = "page-header">Upload Images</h1>
         <ul>
             {% for pics in images %}
                 <img class="image" src="{{ url_for('get_image', filename=pics) }}" />
