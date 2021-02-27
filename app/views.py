@@ -23,7 +23,7 @@ def home():
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Mary Jane")
+    return render_template('about.html', name="Kadian Davidson")
 
 
 @app.route('/upload', methods=['POST', 'GET'])
@@ -52,6 +52,7 @@ def get_upload_images():
     for subdir, dirs, files in os.walk(root_dir + '/uploads'):
         for file in files:
             lst.append (file)
+        lst.pop(1)
     return lst
 
 
